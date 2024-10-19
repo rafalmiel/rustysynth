@@ -17,7 +17,7 @@ impl Zone {
     fn new(info: &ZoneInfo, generators: &[Generator]) -> Self {
         let mut segment: Vec<Generator> = Vec::new();
 
-        for i in 0..info.generator_count {
+        for i in 0..info.generator_count - 1 {
             segment.push(generators[(info.generator_index + 1) as usize]);
         }
 
